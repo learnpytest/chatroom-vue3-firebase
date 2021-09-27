@@ -171,3 +171,7 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+@import "@/scss/abstracts/_form.scss";
+</style>
