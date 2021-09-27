@@ -1,0 +1,67 @@
+.dialogue {
+  overflow: auto;
+  height: 420px;
+  padding: 0 1em;
+  box-shadow: 0 0 10px var(--blue-1);
+  background-color: var(--silver-pink);
+  .user {
+    font-family: "Roboto,Times New Roman, Times, serif";
+    min-width: fit-content;
+    padding: 0.5em 0;
+    display: flex;
+    align-items: flex-start;
+    &.local {
+      justify-content: flex-end;
+    }
+    .avatar {
+      width: 50px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+    .avatar .photo {
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .avatar .photo img {
+      width: 100%;
+      vertical-align: middle;
+    }
+    .avatar .username {
+      font-size: 0.5rem;
+    }
+    .message {
+      padding: 1em;
+      border-radius: 10px;
+      position: relative;
+    }
+    &.remote .message {
+      margin-left: 20px;
+      margin-right: 50px;
+      background-color: var(--white);
+      color: var(--text_color-1);
+    }
+    &.local .message {
+      margin-left: 50px;
+      margin-right: 20px;
+      order: -1;
+      background-color: var(--blue-2);
+    }
+    &.remote .message:before,
+    &.local .message:before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+    }
+    &.remote .message:before {
+      border-right: 10px solid var(--white);
+      left: -10px;
+    }
+
+    &.local .message:before {
+      border-left: 10px solid var(--blue-2);
+      right: -10px;
+    }
+  }
+}
