@@ -174,4 +174,5 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/scss/abstracts/_form.scss";
+@import "@/scss/abstracts/_chatbox.scss";
 </style>
